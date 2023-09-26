@@ -10,6 +10,11 @@ Version: 1.0
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&display=swap');
 
+::selection {
+    background: #0E2A2A;
+    color: #E4F2E7;
+}
+
 body {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 16px;
@@ -222,6 +227,7 @@ body {
     width: 33.33%;
     height: 4px;
     background-color: #0E2A2A;
+    clip-path: polygon(1% 0px, 100% 0px, 100% 100%, 3% 100%);
 }
 
 /* contact us styling bellow */
@@ -331,6 +337,42 @@ body {
 .kontaktai-container .item img {
     margin-right: 5px;
 }
+
+/* about page styling */
+.about-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0E2A2A;
+    opacity: 0.8;
+}
+
+.about-content {
+    padding: 1rem 22%;
+    max-width: 1200px;
+}
+
 
 /* footer styling bellow */
 
