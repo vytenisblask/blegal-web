@@ -1,0 +1,369 @@
+/*
+Theme Name: BLEGAL Theme
+Text Domain: blegal-theme
+Author: @vblask
+Description: Theme for Blaskevicius Legal
+Version: 1.0
+*/
+
+/* Add normalize.css or a CSS reset here */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2rem;
+}
+
+.site-header .custom-logo {
+    flex-shrink: 0;
+    width: 290px;
+    max-height: 3rem;
+}
+
+.logo {
+    flex-shrink: 0;
+    margin-bottom: -0.9rem;
+}
+
+.page-title-strip {
+    background-color: #0E2A2A;
+    height: 87px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    text-align: center;
+    line-height: 85px;
+    color: #fff;
+}
+
+.page-title-strip h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1; 
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-right: 2rem;
+}
+
+.main-navigation li:last-child {
+    margin-right: 2rem;
+}
+
+.main-navigation ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.cta-button {
+    background-color: #0E2A2A;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #143b14;
+}
+
+/* hero section styling bellow */
+
+.hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0E2A2A;
+    opacity: 0.8; 
+}
+
+.hero h1 {
+    font-size: 3rem; 
+    font-weight: 500;
+    margin: 0;
+    color: #F3F3F3;
+    z-index: 1;
+    margin-bottom: 10%;
+}
+
+/* komanda page styling bellow */
+
+.komanda-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding: 1rem 10%;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background-color: #E4F2E7;
+    background-size: contain;
+    background-position: bottom;
+    position: relative;
+    padding-top: 120%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.team-member-wrapper {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.team-member-info {
+    text-align: center;
+}
+
+.team-member-name {
+    margin: 0.5rem 0 0 0;
+}
+
+.team-member-title {
+    margin: 0;
+    font-size: smaller;
+}
+
+@media (max-width: 600px) {
+    .komanda-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* get-in-touch styling */
+
+.get-in-touch-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    margin-top: 1rem;
+    box-sizing: border-box;
+}
+
+.get-in-touch-container .content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.get-in-touch-container .text {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+}
+
+.get-in-touch-container .cta-button {
+    display: inline-block;
+    background-color: #0E2A2A;
+    color: #fff;
+    transition: background-color 0.3s;
+    padding: 0.6rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.get-in-touch-container .cta-button:hover {
+    background-color: #143b14;
+}
+
+.get-in-touch-container .separator-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.33%;
+    height: 4px;
+    background-color: #0E2A2A;
+}
+
+/* contact us styling bellow */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+  .contact-container h3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    display: block;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 0.5rem;
+  }
+  
+  .input_separator {
+    height: 2.4rem;
+  }
+
+  .contact-container label {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .contact-container button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #0E2A2A;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .contact-container button:hover {
+    background-color: #143b14;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0.2rem;
+  }  
+  .successmessage {
+    font-size: 1.5rem;
+    margin-top: 1.4rem;
+  }
+  .separator-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.33%;
+    height: 2px;
+    background-color: #0E2A2A;
+  }
+
+/* contact page styling bellow */
+
+.kontaktai-container {
+    background-image: url('assets/map_addr.png');
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -160px;
+}
+
+.kontaktai-container .info-container {
+    background-color: #E4F2E7;
+    padding: 2.5rem 1rem;
+    width: 25%;
+    margin-left: 10%;
+}
+
+.kontaktai-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontaktai-container .logo,
+.kontaktai-container .text,
+.kontaktai-container .item {
+    margin-bottom: 10px;
+}
+
+.kontaktai-container .logo {
+    max-width: 240px;
+    height: auto;
+}
+
+.kontaktai-container .item img {
+    margin-right: 5px;
+}
+
+/* footer styling bellow */
+
+.site-footer {
+    background-color: #0E2A2A;
+    color: #E4F2E7;
+    padding: 2rem 0;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center; /* Center the text and image within the section */
+    padding: 0 10px; /* Adjust padding as needed */
+}
+
+.footer-section p {
+    line-height: 0.60;
+    font-size: 14px;
+}
+
+.footer-section img {
+    width: 290px;
+    max-height: 3rem;
+}
+
+.footer-divider {
+    background-color: #E4F2E7;
+    width: 1px; /* Adjust width as needed */
+    height: 10rem;
+}
