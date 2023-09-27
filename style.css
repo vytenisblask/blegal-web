@@ -180,6 +180,136 @@ body {
     }
 }
 
+/* paslaugos listing styling */
+.paslaugos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 10%;
+}
+
+.post-item {
+    background-color: #E4F2E7;
+    padding: 2.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #0E2A2A;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.paslaugos-grid a {
+    text-decoration: none;
+}
+
+.post-item:hover {
+    background-color: #0E2A2A;
+    color: #E4F2E7;
+    cursor: pointer;
+}
+
+.post-item svg path {
+    fill: #0E2A2A;
+}
+
+.post-item:hover svg path {
+    fill: #E4F2E7;
+    transition: 0.3s;
+}
+
+.post-item svg {
+    max-width: 100px;
+    height: auto;
+}
+
+.post-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+/* single post styling inner page */
+
+.post-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-hero h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.post-hero-content {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures icon and title are spread out */
+    width: 100%; /* Ensures the content uses the full width of the parent */
+    padding: 1rem 20%; /* Adjust padding as needed */
+}
+
+.post-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0E2A2A;
+    opacity: 0.85;
+}
+
+.post-content {
+    padding: 1rem 22%;
+    max-width: 1200px;
+}
+
+.post-icon {
+    margin-right: 20px;
+}
+
+.post-icon svg {
+    width: 200px;
+    height: auto;
+    padding: 5px;
+}
+
+.post-icon svg path {
+    fill: #E4F2E7;
+}
+
+.post-title {
+    flex-grow: 1; /* Allows the title to grow and take available space */
+    text-align: center;
+}
+
+.back-to-listing {
+    position: absolute;
+    top: 1rem; 
+    left: 1rem;
+    text-decoration: none;
+    color: #E4F2E7;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.back-to-listing:hover {
+    text-decoration: underline;
+}
+
+.arrow-left {
+    margin-right: 5px; /* adjust as needed */
+}
+
 
 /* get-in-touch styling */
 

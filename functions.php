@@ -102,3 +102,17 @@ function register_team_member_cpt() {
 }
 
 add_action('init', 'register_team_member_cpt', 0);
+
+function load_custom_single_template($template) {
+    global $post;
+
+    // Check if the post belongs to the 'paslaugos' category
+    if ( has_category( 'paslaugos', $post ) ) {
+        // specify the path to your custom template
+        return get_stylesheet_directory() . '/single-paslaugos.php';
+    }
+
+    return $template;
+}
+
+add_filter('single_template', 'load_custom_single_template');
