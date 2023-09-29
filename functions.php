@@ -116,3 +116,21 @@ function load_custom_single_template($template) {
 }
 
 add_filter('single_template', 'load_custom_single_template');
+
+function register_custom_fields() {
+    register_rest_field(
+        'post',
+        'display_in_slider',
+        array(
+            'get_callback'    => 'get_custom_field',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_custom_field( $object, $field_name, $request ) {
+    return get_post_meta( $object['id'], $field_name, true );
+}
+
+add_action( 'rest_api_init', 'register_custom_fields' );

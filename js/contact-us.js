@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Vue or Vue.createApp is not defined');
         return;
     }
-    
-    console.log('Creating Vue app'); // Log to check if this code is being executed
-    
+        
     const app = window.Vue.createApp({
       data() {
         return {

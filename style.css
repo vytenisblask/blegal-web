@@ -120,6 +120,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     height: 80vh;
+    min-height: 566px;
     position: relative;
     color: #ffffff;
     display: flex;
@@ -150,8 +151,87 @@ body {
     margin: 0;
     color: #F3F3F3;
     z-index: 1;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
 }
+
+/* hero slider styler */
+
+.hero-slider {
+    background-color: #E4F2E7;
+    padding: 2.2rem 3rem 2rem 3rem;
+    max-width: 450px;
+    min-height: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    z-index: 15;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 16rem;
+    right: 2rem;
+}
+
+.hero-slider .slide {
+    overflow: hidden;
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.slide-content h2 {
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.slide-content p {
+    color: #000;
+}
+
+.read-more {
+    text-transform: uppercase;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000; 
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.chevron-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    padding: 1rem;
+    z-index: 16;
+}
+
+.chevron-button:hover {
+    color: #555;
+}
+
+.chevron-button:disabled {
+    color: #ccc;
+}
+
+.chevron-button:first-of-type {
+    left: 0;
+}
+
+.chevron-button:last-of-type {
+    right: 0;
+}
+
 
 /* komanda page styling bellow */
 
