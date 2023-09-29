@@ -6,15 +6,15 @@ get_header(); ?>
 <div class="post-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/da4eF61ZGFY.jpg')">
     <div class="post-hero-content">
         <a href="/paslaugos" class="back-to-listing">
-            <span class="arrow-left">&#8592;</span> visos paslaugos
+           &#8592; visos paslaugos
         </a>
-        <!-- Display SVG icon -->
+        <!-- Display SVG icon 
         <?php $icon = get_field('icon'); ?>
         <?php if($icon): ?>
             <div class="post-icon">
                 <?php echo file_get_contents(esc_url($icon['url'])); ?>
             </div>
-        <?php endif; ?>
+        <?php endif; ?>-->
         <h1 class="post-title"><?php the_title(); ?></h1>
     </div>
 </div>

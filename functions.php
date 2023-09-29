@@ -172,3 +172,13 @@ function get_custom_field( $object, $field_name, $request ) {
 }
 
 add_action( 'rest_api_init', 'register_custom_fields' );
+
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Paslaugos'; // Change Posts label to Paslaugos
+    $submenu['edit.php'][5][0] = 'Darbo Skelbimai';
+    $submenu['edit.php'][10][0] = 'Add Darbo Skelbimai';
+    $submenu['edit.php'][16][0] = 'Darbo Skelbimai Tags';
+}
+add_action('admin_menu', 'change_post_menu_label');
