@@ -103,6 +103,44 @@ function register_team_member_cpt() {
 
 add_action('init', 'register_team_member_cpt', 0);
 
+function register_darbo_skelbimai_post_type() {
+    $labels = array(
+        'name' => _x('Darbo Skelbimai', 'post type general name', 'textdomain'),
+        'singular_name' => _x('Darbo Skelbimas', 'post type singular name', 'textdomain'),
+        'menu_name' => _x('Darbo Skelbimai', 'admin menu', 'textdomain'),
+        'name_admin_bar' => _x('Darbo Skelbimas', 'add new on admin bar', 'textdomain'),
+        'add_new' => _x('Add New', 'book', 'textdomain'),
+        'add_new_item' => __('Add New Darbo Skelbimas', 'textdomain'),
+        'new_item' => __('New Darbo Skelbimas', 'textdomain'),
+        'edit_item' => __('Edit Darbo Skelbimas', 'textdomain'),
+        'view_item' => __('View Darbo Skelbimas', 'textdomain'),
+        'all_items' => __('All Darbo Skelbimai', 'textdomain'),
+        'search_items' => __('Search Darbo Skelbimai', 'textdomain'),
+        'parent_item_colon' => __('Parent Darbo Skelbimai:', 'textdomain'),
+        'not_found' => __('No darbo skelbimai found.', 'textdomain'),
+        'not_found_in_trash' => __('No darbo skelbimai found in Trash.', 'textdomain')
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'darbo-skelbimai'),
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+    );
+
+    register_post_type('darbo_skelbimai', $args);
+}
+
+add_action('init', 'register_darbo_skelbimai_post_type');
+
 function load_custom_single_template($template) {
     global $post;
 

@@ -497,6 +497,59 @@ body {
     clip-path: polygon(1% 0px, 100% 0px, 100% 100%, 3% 100%);
 }
 
+/* karjera page */
+
+.karjera-wrapper .get-in-touch-container .content {
+    max-width: 800px;
+}
+
+.why-work {
+    background-color: #E4F2E7;
+    padding: 2rem 2rem;
+    width: 50%;
+    margin: 4rem auto;
+}
+
+.why-work h2 {
+    text-align: center;
+}
+
+.job-posts-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.job-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-post {
+    padding: 10px;
+    margin: 5px auto;
+    background-color: #E4F2E7;
+    text-decoration: none;
+    color: inherit;
+    width: 55%;
+}
+
+.job-post:hover {
+    background-color: #0E2A2A;
+    color: #E4F2E7;
+    cursor: pointer;
+}
+
+.job-wrap {
+    margin: 2rem auto;
+}
+
+.job-description {
+    max-width: 600px;
+    padding: 1rem;
+    margin: auto;
+}
+
 /* contact us styling bellow */
 
 .contact-container {
