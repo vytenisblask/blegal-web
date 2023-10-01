@@ -20,6 +20,7 @@
         </div>
 
         <nav class="main-navigation">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/np_burger-menu.svg" class="menu-toggle" alt="Menu Toggle">
             <?php 
             wp_nav_menu( array( 
                 'theme_location' => 'primary', 
@@ -27,8 +28,7 @@
                 'container'      => false 
             ) ); 
             ?>
+            <li class="mobile-cta"><a href="/kontaktai" class="cta-button">Kontaktai</a></li>
         </nav>
-
-        <a href="/kontaktai" class="cta-button">Kontaktai</a>
     </div>
 </header>

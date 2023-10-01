@@ -72,7 +72,7 @@ body {
 }
 
 .main-navigation li:last-child {
-    margin-right: 2rem;
+    margin-right: 0;
 }
 
 .main-navigation ul li a {
@@ -87,10 +87,10 @@ body {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px; /* You can adjust the thickness of the underline */
+    height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000; /* Adjust the color as needed */
+    background-color: #000;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -99,7 +99,6 @@ body {
     visibility: visible;
     width: 100%;
 }
-
 
 .cta-button {
     background-color: #0E2A2A;
@@ -111,6 +110,58 @@ body {
 
 .cta-button:hover {
     background-color: #143b14;
+}
+
+.menu-toggle {
+    display: none;
+    max-width: 45px;
+    height: auto;
+}
+
+.mobile-cta {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .main-navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        background-color: #fff;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .main-navigation li {
+        margin-right: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .main-navigation.active ul {
+        display: flex;
+    }
+
+    .main-navigation li:last-child {
+        margin-right: 0;
+    }
+
+    .cta-button {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Show the mobile CTA only when menu is active */
+    .main-navigation.active .mobile-cta {
+        display: block;
+    }
 }
 
 /* hero section styling bellow */
@@ -365,6 +416,22 @@ body {
     visibility: visible;
     width: 100%;
 }
+
+
+@media (max-width: 900px) {
+    .paslaugos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .paslaugos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 
 /* single post styling inner page */
 

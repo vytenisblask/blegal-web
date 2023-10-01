@@ -64,3 +64,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     sliderApp.component('hero-slider', HeroSlider);
     sliderApp.mount('#slider-app');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.main-navigation');
+
+    menuToggle.addEventListener('click', function() {
+        navigation.classList.toggle('active');
+    });
+});

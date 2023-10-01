@@ -177,8 +177,8 @@ function change_post_menu_label() {
     global $menu;
     global $submenu;
     $menu[5][0] = 'Paslaugos'; // Change Posts label to Paslaugos
-    $submenu['edit.php'][5][0] = 'Darbo Skelbimai';
-    $submenu['edit.php'][10][0] = 'Add Darbo Skelbimai';
-    $submenu['edit.php'][16][0] = 'Darbo Skelbimai Tags';
+    $submenu['edit.php'][5][0] = 'Paslaugos';
+    $submenu['edit.php'][10][0] = 'Add Paslaugos';
+    $submenu['edit.php'][16][0] = 'Paslaugos Tags';
 }
 add_action('admin_menu', 'change_post_menu_label');
