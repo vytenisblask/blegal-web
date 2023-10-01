@@ -68,8 +68,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('.main-navigation');
+    const mobileCTA = document.querySelector('.mobile-cta');
+    const primaryMenu = document.getElementById('primary-menu');
+
+    // Move the mobile CTA inside the primary menu
+    primaryMenu.appendChild(mobileCTA);
 
     menuToggle.addEventListener('click', function() {
         navigation.classList.toggle('active');
     });
 });
+

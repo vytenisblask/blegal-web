@@ -72,7 +72,7 @@ body {
 }
 
 .main-navigation li:last-child {
-    margin-right: 0;
+    margin-right: 2rem;
 }
 
 .main-navigation ul li a {
@@ -138,6 +138,9 @@ body {
         width: 300px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 10;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s; 
     }
 
     .main-navigation li {
@@ -145,22 +148,22 @@ body {
         padding: 0.5rem 1rem;
     }
 
+    .main-navigation li:last-child {
+        margin-right: 0rem;
+    }
+
     .main-navigation.active ul {
         display: flex;
+        opacity: 1;
+        padding: 1rem 2rem;
     }
 
-    .main-navigation li:last-child {
-        margin-right: 0;
+    .cta-button.desktop-cta {
+        display: none; 
     }
 
-    .cta-button {
-        width: 90%;
-        text-align: center;
-    }
-
-    /* Show the mobile CTA only when menu is active */
-    .main-navigation.active .mobile-cta {
-        display: block;
+    .cta-button.mobile-cta {
+        display: block; 
     }
 }
 

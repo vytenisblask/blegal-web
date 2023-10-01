@@ -28,7 +28,8 @@
                 'container'      => false 
             ) ); 
             ?>
-            <li class="mobile-cta"><a href="/kontaktai" class="cta-button">Kontaktai</a></li>
+            <a href="/kontaktai" class="cta-button mobile-cta">Kontaktai</a> <!-- Mobile version of the CTA -->
         </nav>
+        <a href="/kontaktai" class="cta-button desktop-cta">Kontaktai</a> <!-- Desktop version of the CTA -->
     </div>
 </header>
