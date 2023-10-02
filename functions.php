@@ -103,6 +103,41 @@ function register_team_member_cpt() {
 
 add_action('init', 'register_team_member_cpt', 0);
 
+function create_naujienos_cpt() {
+    $labels = array(
+        'name' => _x('Naujienos', 'Post Type General Name', 'textdomain'),
+        'singular_name' => _x('Naujiena', 'Post Type Singular Name', 'textdomain'),
+        'menu_name' => _x('Naujienos', 'admin menu', 'textdomain'),
+        'name_admin_bar' => _x('Naujiena', 'add new on admin bar', 'textdomain'),
+        'add_new' => _x('Add New', 'book', 'textdomain'),
+        'add_new_item' => __('Add New Naujiena', 'textdomain'),
+        'new_item' => __('New Naujiena', 'textdomain'),
+        'edit_item' => __('Edit Naujiena', 'textdomain'),
+        'view_item' => __('View Naujiena', 'textdomain'),
+        'all_items' => __('All Naujienos', 'textdomain'),
+        'search_items' => __('Search Naujienos', 'textdomain'),
+        'parent_item_colon' => __('Parent Naujiena:', 'textdomain'),
+        'not_found' => __('No naujienos found.', 'textdomain'),
+        'not_found_in_trash' => __('No naujienos found in Trash.', 'textdomain')
+    );
+    $args = array(
+        'label' => __('Naujienos', 'textdomain'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'public' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => 'naujienos',
+        'rewrite' => array('slug' => 'naujienos'),
+    );
+    register_post_type('naujienos', $args);
+}
+add_action('init', 'create_naujienos_cpt');
+
+
 function register_darbo_skelbimai_post_type() {
     $labels = array(
         'name' => _x('Darbo Skelbimai', 'post type general name', 'textdomain'),
