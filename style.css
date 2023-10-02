@@ -132,7 +132,7 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 10%;
+        top: 16%;
         right: 0;
         background-color: #fff;
         width: 300px;
@@ -478,6 +478,12 @@ body {
 .post-content {
     padding: 1rem 22%;
     max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+    .post-content {
+        padding: 1rem 10%;
+    }
 }
 
 .post-icon {
@@ -839,7 +845,6 @@ body {
 
 
 /* footer styling bellow */
-
 .site-footer {
     background-color: #0E2A2A;
     color: #E4F2E7;
@@ -848,14 +853,14 @@ body {
 
 .container {
     display: flex;
-    align-items: center; /* Vertically center the content */
+    align-items: center;
     justify-content: space-between;
 }
 
 .footer-section {
     flex: 1;
-    text-align: center; /* Center the text and image within the section */
-    padding: 0 10px; /* Adjust padding as needed */
+    text-align: center;
+    padding: 0 10px;
 }
 
 .footer-section p {
@@ -870,6 +875,33 @@ body {
 
 .footer-divider {
     background-color: #E4F2E7;
-    width: 1px; /* Adjust width as needed */
+    width: 2px;
     height: 10rem;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .footer-section:first-child {
+        order: 3;
+    }
+
+    .footer-section:nth-child(2) {
+        order: 1;
+    }
+
+    .footer-section:last-child {
+        order: 2;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-section {
+        padding: 1rem 0;
+    }
 }
