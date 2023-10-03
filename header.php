@@ -6,6 +6,9 @@
     <!-- Optional meta tags for SEO, social sharing, etc. -->
     
     <?php wp_head(); ?>
+    <!-- Include GSAP Core -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+
 </head>
 <body <?php body_class(); ?>>
 
@@ -20,7 +23,7 @@
         </div>
 
         <nav class="main-navigation">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/np_burger-menu.svg" class="menu-toggle" alt="Menu Toggle">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/np_burger-menu.svg" class="menu-toggle" alt="Menu Toggle" data-state="burger">
             <?php 
             wp_nav_menu( array( 
                 'theme_location' => 'primary', 

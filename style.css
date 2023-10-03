@@ -24,6 +24,7 @@ body {
 
 .site-header .container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1.8rem 2rem;
@@ -132,11 +133,11 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 16%;
+        top: 12%;
         right: 0;
         background-color: #fff;
         width: 300px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
         z-index: 100;
         align-items: center;
         opacity: 0;

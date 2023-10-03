@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     sliderApp.component('hero-slider', HeroSlider);
     sliderApp.mount('#slider-app');
 });
+  
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -75,7 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     primaryMenu.appendChild(mobileCTA);
 
     menuToggle.addEventListener('click', function() {
+        if (menuToggle.getAttribute('data-state') === 'burger') {
+            menuToggle.src = menuToggle.src.replace('np_burger-menu.svg', 'np_x.svg');
+            menuToggle.setAttribute('data-state', 'x');
+        } else {
+            menuToggle.src = menuToggle.src.replace('np_x.svg', 'np_burger-menu.svg');
+            menuToggle.setAttribute('data-state', 'burger');
+        }
+
         navigation.classList.toggle('active');
     });
 });
-
