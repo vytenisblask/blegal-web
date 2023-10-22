@@ -133,7 +133,7 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 12%;
+        top: 11%;
         right: 0;
         background-color: #fff;
         width: 300px;
@@ -165,6 +165,12 @@ body {
 
     .cta-button.mobile-cta {
         display: block; 
+    }
+    .site-header .container {
+        padding: 1.5rem 1.1rem;
+    }
+    .site-header .custom-logo {
+        max-height: 2.5rem;
     }
 }
 
@@ -206,7 +212,7 @@ body {
     margin: 0;
     color: #F3F3F3;
     z-index: 1;
-    margin-bottom: 12%;
+    margin-bottom: 7%;
 }
 
 /* hero slider styler */
@@ -219,11 +225,12 @@ body {
     max-height: 200px;
     margin: 0 auto;
     z-index: 15;
+    border-radius: 4px;
 }
 
 .hero-slider {
     position: absolute;
-    top: 16rem;
+    top: 24rem;
     right: 2rem;
 }
 
@@ -287,6 +294,14 @@ body {
     right: 0;
 }
 
+@media (max-width: 900px) {
+    .hero h1 {
+        text-align: center;
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+}
+
 
 /* komanda page styling bellow */
 
@@ -303,7 +318,7 @@ body {
     background-size: contain;
     background-position: bottom;
     position: relative;
-    padding-top: 120%;
+    padding-top: 115%;
     width: 100%;
     background-repeat: no-repeat;
 }
@@ -340,18 +355,19 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    padding: 2rem 10%;
+    padding: 3rem 10%;
 }
 
 .post-item {
     background-color: #E4F2E7;
-    padding: 2.2rem 1rem;
+    padding: 2.2rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #0E2A2A;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
 }
 
 .paslaugos-grid a {
@@ -395,7 +411,7 @@ body {
     color: inherit;
     position: absolute;
     display: inline-block;
-    bottom: 0rem;
+    bottom: 0.6rem;
     right: 9%;
     text-decoration: none;
     padding: 0rem;
@@ -443,7 +459,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 45vh;
     position: relative;
     color: #ffffff;
     display: flex;
@@ -534,7 +550,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 4rem 0;
     margin-top: 1rem;
     box-sizing: border-box;
 }
