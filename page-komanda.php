@@ -19,9 +19,13 @@ get_header(); ?>
         while ($team_members->have_posts()) : $team_members->the_post(); 
             $image = get_field('team_member_photo');
             $bgStyle = !empty($image) ? "background-image: url('". esc_url($image['url']) ."');" : "";
-            ?>
+            ?>             
             <div class="team-member-wrapper">
-                <div class="team-member" style="<?php echo $bgStyle; ?>"></div>
+                <div class="team-member" data-link="<?php the_permalink(); ?>" style="<?php echo $bgStyle; ?>">
+                    <a href="<?php the_field('linkedin_link'); ?>" class="linkedin-icon-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/linkedin_gr.svg" alt="LinkedIn">
+                    </a>
+                </div>
                 <div class="team-member-info">
                     <h3 class="team-member-name"><?php the_field('team_member_name'); ?> <?php the_field('team_member_surname'); ?></h3>
                     <p class="team-member-title"><?php the_field('team_member_job_title'); ?></p>

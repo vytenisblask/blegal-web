@@ -87,3 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
         navigation.classList.toggle('active');
     });
 });
+
+
+jQuery(document).ready(function($) {
+    $('.team-member').on('click', function(e) {
+        // Prevent the LinkedIn link from being triggered
+        if (!$(e.target).closest('.linkedin-icon-link').length) {
+            window.location = $(this).attr('data-link');
+        }
+    });
+});

@@ -315,18 +315,21 @@ body {
 
 .team-member {
     background-color: #E4F2E7;
-    background-size: contain;
-    background-position: bottom;
+    background-size: cover;
+    background-position: center;
     position: relative;
-    padding-top: 115%;
+    padding-top: 110%;
     width: 100%;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-size 0.75s ease-in-out; 
+}
+
+.team-member:hover {
+    background-size: 118%;
 }
 
 .team-member-wrapper {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     margin-bottom: 10px;
     width: 100%;
 }
@@ -343,6 +346,18 @@ body {
     margin: 0;
     font-size: smaller;
 }
+
+.team-member {
+    position: relative;
+}
+
+.linkedin-icon-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px; /* Optional: to give some space from the edge */
+}
+
 
 @media (max-width: 600px) {
     .komanda-grid {
