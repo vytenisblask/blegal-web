@@ -25,7 +25,7 @@ get_header(); ?>
                     </div>
                     <div class="naujienos-content">
                         <h2><?php the_title(); ?></h2>
-                        <p><?php echo substr(get_the_excerpt(), 0, 175) . (strlen(get_the_excerpt()) > 75 ? "..." : ""); ?></p>
+                        <p><?php echo substr(get_the_excerpt(), 0, 75) . (strlen(get_the_excerpt()) > 45 ? "..." : ""); ?></p>
                         <a href="<?php the_permalink(); ?>">Skaityti toliau &#8594;</a>
                     </div>
                 </div>
