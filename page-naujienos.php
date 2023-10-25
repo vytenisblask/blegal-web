@@ -8,7 +8,6 @@ get_header(); ?>
 
 <div class="naujienos-container">
     <div class="naujienos-grid">
-
         <?php
         $args = array(
             'post_type' => 'naujienos',
@@ -18,23 +17,16 @@ get_header(); ?>
 
         if ($naujienos->have_posts()) : 
             while ($naujienos->have_posts()) : $naujienos->the_post(); ?>
-
-                <div class="naujienos-item">
-                    <div class="naujienos-image">
-                        <img src="<?php the_field('image_field'); ?>" alt="<?php the_title(); ?>">
-                    </div>
-                    <div class="naujienos-content">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php echo substr(get_the_excerpt(), 0, 75) . (strlen(get_the_excerpt()) > 45 ? "..." : ""); ?></p>
-                        <a href="<?php the_permalink(); ?>">Skaityti toliau &#8594;</a>
-                    </div>
-                </div>
-
+                <a href="<?php the_permalink(); ?>" class="naujienos-item">
+                    <div class="naujienos-image" style="background-image: url('<?php the_field('image_field'); ?>')"></div>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo substr(get_the_excerpt(), 0, 75) . (strlen(get_the_excerpt()) > 45 ? "..." : ""); ?></p>
+                    <!-- <span class="read-more-link">Skaityti toliau &#8594;</span> -->
+                </a>
             <?php endwhile;
         endif; 
         wp_reset_postdata();
         ?>
-
     </div>
 </div>
 
