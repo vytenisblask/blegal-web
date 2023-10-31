@@ -491,9 +491,9 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures icon and title are spread out */
-    width: 100%; /* Ensures the content uses the full width of the parent */
-    padding: 1rem 20%; /* Adjust padding as needed */
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 20%;
 }
 
 .post-hero::before {
@@ -533,7 +533,7 @@ body {
 }
 
 .post-title {
-    flex-grow: 1; /* Allows the title to grow and take available space */
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -552,7 +552,7 @@ body {
 }
 
 .arrow-left {
-    margin-right: 5px; /* adjust as needed */
+    margin-right: 5px;
 }
 
 
