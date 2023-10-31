@@ -27,7 +27,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1.8rem 2rem;
+    padding: 1.65rem 2rem;
 }
 
 .site-header .custom-logo {
@@ -43,10 +43,10 @@ body {
 
 .page-title-strip {
     background-color: #0E2A2A;
-    height: 87px;
+    height: 80px;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
     text-align: center;
-    line-height: 85px;
+    line-height: 80px;
     color: #fff;
 }
 
@@ -212,7 +212,7 @@ body {
     margin: 0;
     color: #F3F3F3;
     z-index: 1;
-    margin-bottom: 7%;
+    margin-bottom: 6%;
 }
 
 /* hero slider styler */
@@ -355,7 +355,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 10px; /* Optional: to give some space from the edge */
+    padding: 10px;
 }
 
 
