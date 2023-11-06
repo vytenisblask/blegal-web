@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<!-- template parts -->
 <?php get_template_part('template-parts/hero'); ?>
 
 

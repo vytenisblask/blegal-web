@@ -14,7 +14,6 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 function theme_prefix_setup() {
     add_theme_support( 'custom-logo' );
-    // Consider adding more theme support here
 }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
@@ -28,7 +27,6 @@ function register_theme_menus() {
 add_action( 'init', 'register_theme_menus' );
 
 function enable_svg_upload( $mimes ) {
-    // Consider implementing additional security measures for SVG uploads
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
@@ -36,19 +34,16 @@ add_filter( 'upload_mimes', 'enable_svg_upload' );
 
 
 function blegal_customize_register( $wp_customize ) {
-    // Add Section
     $wp_customize->add_section('kontaktai_section', array(
         'title'    => __('Kontaktai Page', 'blegal-theme'),
         'priority' => 120,
     ));
 
-    // Add Setting
     $wp_customize->add_setting('kontaktai_text_setting', array(
         'default'   => 'Default Text',
         'transport' => 'refresh',
     ));
 
-    // Add Control
     $wp_customize->add_control(new WP_Customize_Control(
         $wp_customize,
         'kontaktai_text_control',
@@ -179,9 +174,7 @@ add_action('init', 'register_darbo_skelbimai_post_type');
 function load_custom_single_template($template) {
     global $post;
 
-    // Check if the post belongs to the 'paslaugos' category
     if ( has_category( 'paslaugos', $post ) ) {
-        // specify the path to your custom template
         return get_stylesheet_directory() . '/single-paslaugos.php';
     }
 
@@ -211,7 +204,7 @@ add_action( 'rest_api_init', 'register_custom_fields' );
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'Paslaugos'; // Change Posts label to Paslaugos
+    $menu[5][0] = 'Paslaugos';
     $submenu['edit.php'][5][0] = 'Paslaugos';
     $submenu['edit.php'][10][0] = 'Add Paslaugos';
     $submenu['edit.php'][16][0] = 'Paslaugos Tags';

@@ -11,7 +11,6 @@
             <li>Lankstus darbo grafikas ir galimybę derinti darbą su studijomis.</li>
             <li>Iššūkius ir profesinio tobulėjimo galimybes bei galimybę dirbti su sudėtingais ir tobulėjimą skatinančiais verslo ginčais.</li>
             <li>Puikią darbo atmosferą, draugišką ir vieningą kolektyvą, praktiką dinamiškoje darbinėje aplinkoje.</li>
-            <!-- <li>Sėdmaišiai.</li> -->
         </ul>
     </div>
 
