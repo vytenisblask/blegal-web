@@ -3,7 +3,7 @@ Theme Name: BLEGAL Theme
 Text Domain: blegal-theme
 Author: @vblask
 Description: Theme for Blaskevicius Legal
-Version: 1.1
+Version: 1.2
 */
 
 /* Add normalize.css or a CSS reset here */
@@ -326,6 +326,9 @@ body {
 
     .hero-slider {
         order: 2;
+    }
+    .chevron-button {
+        display: none;
     }
 }
 

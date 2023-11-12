@@ -43,10 +43,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     this.currentSlideIndex = this.posts.length - 1;
                 }
             },
+            isMobileDevice() {
+                return window.innerWidth <= 900; // mobile breakpoint
+            },
             startAutoScroll() {
-                this.autoScrollTimer = setInterval(() => {
-                    this.nextSlide();
-                }, 2500);
+                if (!this.isMobileDevice()) {
+                    this.autoScrollTimer = setInterval(() => {
+                        this.nextSlide();
+                    }, 2500);
+                }
             },
             stopAutoScroll() {
                 clearInterval(this.autoScrollTimer);
@@ -64,6 +69,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             goToSlide(index) {
                 this.currentSlideIndex = index;
             }
+        },
+        mounted() {
+            this.fetchPosts();
+            window.addEventListener('resize', this.startAutoScroll);
+            this.startAutoScroll();
+        },
+        beforeUnmount() {
+            this.stopAutoScroll();
+            window.removeEventListener('resize', this.startAutoScroll);
         },
         template: `
             <div class="hero-slider" v-if="posts.length > 0" @mouseenter="onSlideHover" @mouseleave="onSlideLeave">
