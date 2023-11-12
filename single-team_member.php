@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="team-member-photo" style="background-image: url('<?php the_field('team_member_photo'); ?>')"></div>
     <div class="team-member-details">
         <div class="post-content">
-            <?php the_field('team_member_description'); // This assumes you have an ACF field for the description. ?>
+            <?php the_field('team_member_description'); ?>
         </div>
     </div>
 </div>

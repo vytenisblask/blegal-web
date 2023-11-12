@@ -193,6 +193,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 2;
+    width: 50%;
 }
 
 .hero::before {
@@ -212,26 +213,31 @@ body {
     margin: 0;
     color: #F3F3F3;
     z-index: 1;
-    margin-bottom: 6%;
 }
 
-/* hero slider styler */
+.hero h3 {
+    font-size: 1rem; 
+    font-weight: 500;
+    margin: 0;
+    color: #F3F3F3;
+    z-index: 1;
+}
+
+/* hero slider styles bellow */
 
 .hero-slider {
     background-color: #E4F2E7;
     padding: 2.2rem 3rem 2rem 3rem;
     max-width: 450px;
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 220px;
+    max-height: 450px;
     margin: 0 auto;
     z-index: 15;
     border-radius: 4px;
-}
-
-.hero-slider {
-    position: absolute;
-    top: 24rem;
-    right: 2rem;
+    width: 100%;
+    position: relative;
+    top: auto;
+    right: auto;
 }
 
 .hero-slider .slide {
@@ -255,7 +261,6 @@ body {
 }
 
 .read-more {
-    text-transform: uppercase;
     text-transform: uppercase;
     text-decoration: none;
     color: #000; 
@@ -295,10 +300,28 @@ body {
 }
 
 @media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 3rem;
+    } 
+    
+    .hero-slider {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
     .hero h1 {
         text-align: center;
         font-size: 2.3rem;
         line-height: 1.1;
+    }
+
+    .hero-slider {
+        order: 2;
     }
 }
 
