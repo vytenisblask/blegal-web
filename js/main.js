@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return;
     }
 
-    // Define the HeroSlider component
     const HeroSlider = {
         data() {
             return {
                 posts: [],
-                currentSlideIndex: 0, // the index of the currently displayed slide
+                currentSlideIndex: 0,
+                autoScrollTimer: null,
             };
         },
         mounted() {
             this.fetchPosts();
+            this.startAutoScroll();
+        },
+        beforeUnmount() {
+            this.stopAutoScroll();
         },
         methods: {
             async fetchPosts() {
@@ -24,28 +28,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 } catch (error) {
                     console.error('Error fetching posts:', error);
                 }
-            },                         
+            },
             nextSlide() {
                 if (this.currentSlideIndex < this.posts.length - 1) {
                     this.currentSlideIndex++;
                 } else {
-                    this.currentSlideIndex = 0; // Go back to the first slide
+                    this.currentSlideIndex = 0;
                 }
             },
             previousSlide() {
                 if (this.currentSlideIndex > 0) {
                     this.currentSlideIndex--;
                 } else {
-                    this.currentSlideIndex = this.posts.length - 1; // Go to the last slide
+                    this.currentSlideIndex = this.posts.length - 1;
                 }
+            },
+            startAutoScroll() {
+                this.autoScrollTimer = setInterval(() => {
+                    this.nextSlide();
+                }, 2500);
+            },
+            stopAutoScroll() {
+                clearInterval(this.autoScrollTimer);
+            },
+            onSlideHover() {
+                this.stopAutoScroll();
+            },
+            onSlideLeave() {
+                this.startAutoScroll();
             },
             truncate(html, length) {
                 const text = html.replace(/<\/?[^>]+(>|$)/g, "");
                 return text.length > length ? text.substring(0, length) + '...' : text;
-              },
+            },
+            goToSlide(index) {
+                this.currentSlideIndex = index;
+            }
         },
         template: `
-            <div class="hero-slider" v-if="posts.length > 0">
+            <div class="hero-slider" v-if="posts.length > 0" @mouseenter="onSlideHover" @mouseleave="onSlideLeave">
                 <div class="slide" v-for="(post, index) in posts" :key="index" v-show="index === currentSlideIndex">
                     <div class="slide-content">
                         <h2>{{ post.title.rendered }}</h2>
@@ -53,18 +74,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         <a :href="post.link" class="read-more">Read More &#8594;</a>
                     </div>
                 </div>
+                <div class="slide-indicators">
+                    <span v-for="(post, index) in posts" :key="index" class="dot" :class="{ active: index === currentSlideIndex }" @click="goToSlide(index)"></span>
+                </div>
                 <button class="chevron-button" @click="previousSlide">&#x276E;</button>
                 <button class="chevron-button" @click="nextSlide">&#x276F;</button>                
             </div>
         `,
     };
 
-    // Create a new Vue app specifically for the slider
     const sliderApp = window.Vue.createApp({});
     sliderApp.component('hero-slider', HeroSlider);
     sliderApp.mount('#slider-app');
 });
-  
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
