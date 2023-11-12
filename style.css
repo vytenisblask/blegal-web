@@ -3,7 +3,7 @@ Theme Name: BLEGAL Theme
 Text Domain: blegal-theme
 Author: @vblask
 Description: Theme for Blaskevicius Legal
-Version: 1.2
+Version: 1.4
 */
 
 /* Add normalize.css or a CSS reset here */
@@ -795,7 +795,7 @@ body {
     margin: auto;
 }
 
-/* contact us styling bellow */
+/* contact us widget styling bellow */
 
 .contact-container {
     display: flex;
@@ -885,7 +885,8 @@ body {
 .kontaktai-container .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 0 0 1rem;
 }
 
 .kontaktai-container .logo,
@@ -897,10 +898,20 @@ body {
 .kontaktai-container .logo {
     max-width: 240px;
     height: auto;
+    align-self: center;
 }
 
 .kontaktai-container .item img {
     margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+    .kontaktai-container .info-container {
+        padding: 2rem 0;
+        width: 100%;
+        margin: 0 1rem;
+        margin-bottom: 20%;
+    }
 }
 
 /* about page styling */

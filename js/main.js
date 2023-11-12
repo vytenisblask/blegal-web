@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (!this.isMobileDevice()) {
                     this.autoScrollTimer = setInterval(() => {
                         this.nextSlide();
-                    }, 2500);
+                    }, 2850);
                 }
             },
             stopAutoScroll() {
